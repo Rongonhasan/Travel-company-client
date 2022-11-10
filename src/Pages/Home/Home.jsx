@@ -1,7 +1,7 @@
 import React from 'react';
+import Stat from '../Stat/Stat';
 import About from './About/About';
 import Bannar from './Bannar/Bannar';
-import ServiceCard from './Services/ServiceCard';
 import Services from './Services/Services';
 
 
@@ -10,6 +10,7 @@ const Home = () => {
         <div>
            <Bannar></Bannar>
            <About></About>
+           <Stat></Stat>
            <Services></Services>
         </div>
     );
