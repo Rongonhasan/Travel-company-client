@@ -65,9 +65,9 @@ const Blog = () => {
         </div>
         <div className="collapse-content">
           <p>
-             {/* Javascript is a programming language that is used for writing
+             Javascript is a programming language that is used for writing
             scripts on the website. <br /> And NodeJS is a Javascript runtime
-            environment.  */}
+            environment. 
           </p>
         </div>
       </div>
