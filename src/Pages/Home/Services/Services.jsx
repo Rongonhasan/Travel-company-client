@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
@@ -16,9 +16,14 @@ const Services = () => {
                   service.map(e=><ServiceCard key={e._id}
                      e={e}></ServiceCard>)  
                 }
+               
             </div>
-            
+           <div className='text-center my-5'>
+          <Link to="/services"> <button className='btn btn-info  '>See All</button></Link>
+           </div>
+           
         </div>
+        
     );
 };
 

@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
 const ServiceCard = ({e}) => {
     
-    const { name, image, price, service,description } = e;
-    const short= description.slice(0,100);
+    const {_id, name, image, price, service,description } = e;
+    const short= description.slice(0,100) + "...";
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl my-6">
+    
+       <div>
+         <div className="card card-compact w-96 bg-base-100 shadow-xl my-6">
             <figure><img className='w-auto h-72' src={image} alt="" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
@@ -15,15 +18,18 @@ const ServiceCard = ({e}) => {
                 <p>{service}</p>
                 <p>{short}</p>
                 <div className="card-actions justify-end">
-                    <button className='btn btn-primary'> Details</button>
-                    {/* <Link to={`/checkout/${_id}`}>
-                        <button className="btn btn-primary">Checkout</button>
-                    </Link> */}
+                    
+                    <Link to={`/services/${_id}`}>
+                        <button className="btn btn-primary">Read</button>
+                    </Link>
                    
                 </div>
             </div>
         </div>
-        
+        <div>
+       
+        </div>
+       </div>
     );
 };
 
