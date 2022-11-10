@@ -17,17 +17,17 @@ import SignUp from "../Pages/Home/SignUp/SignUp";
             {
                 path: '/',
                 element: <Home></Home>,
-                loader:()=>fetch('http://localhost:5000')
+                loader:()=>fetch('https://travel-server-phi.vercel.app')
             },
             {
                 path: '/services',
                 element: <AllService></AllService>,
-                loader:()=>fetch('http://localhost:5000/services')
+                loader:()=>fetch('https://travel-server-phi.vercel.app/services')
             },
             {
                 path: '/services/:id',
                 element: <CardDetails></CardDetails>,
-                loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+                loader:({params})=>fetch(`https://travel-server-phi.vercel.app/services/${params.id}`)
             },
            
             {
